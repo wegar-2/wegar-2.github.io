@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "(WiP) Logic and Computation - Reconciling (Some of) the Very Basic Terminology"
-date: 2026-08-19
+date: 2026-08-20
 category: notes-from-basement
 ---
 
@@ -113,13 +113,23 @@ might happend to be a RE lang or a recusive lang.
 We then probe a word $w \in \Sigma^*$, e.g. $w=101100101101$, feed it into 
 TM $M$ and watch what happens (possibly infinitely long).
 
+This diagram (courtesy of ChatGPT) can be of a little help:
+![diagram](../graphics/lang_euler_chart.png)
+
+
+Having looked at the concepts (slightly) more formally, let's try to reconcile
+them with the intuitive idea of a decidable problem. 
+
+(Note: I am deliberately NOT discussing here how languages relate to problems
+- cf. Ullman for clarification if needed. ).
 
 
 
 ### 3. The Logical Perspective
 
-The key to my investigation from the vantage point of logic is the 
-definition given by Smith 
+We will start by jumping into the definition:
+
+**Definition(Computable Function)**
 
 
 

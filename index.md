@@ -10,7 +10,7 @@ Before that, I worked at Axpo Polska as a quant analyst,
 developing ML models-based trading approaches for spot electricity markets, 
 after several years in market risk role.
 
-I studied at Warsaw School of Economics. I wrote my master's thesis on 
+I graduated from Warsaw School of Economics. I wrote my master's thesis on 
 application of Vanna-Volga method to valuation of EURPLN barrier options.  
 
 [My LinkedIn profile](https://www.linkedin.com/in/artur-w%C4%99grzyn-3bb898125/)
