@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Hello, world!"
 date: 2026-08-19
 category: notes-from-basement
