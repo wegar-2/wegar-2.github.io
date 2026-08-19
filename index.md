@@ -18,5 +18,5 @@ You can contact me via email: [awegrzyn17@gmail.com](mailto:awegrzyn17@gmail.com
 
 ## Blog
 
-- [Notes from the Basement](notes-from-the-basement/) - my new blog, more content pending.
+- [Notes from Basement](notes-from-basement/) - my new blog, more content pending.
 
