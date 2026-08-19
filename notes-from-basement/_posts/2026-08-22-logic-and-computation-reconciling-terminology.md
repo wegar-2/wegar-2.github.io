@@ -71,11 +71,11 @@ This brings us to the definition of the first, broad kind of TM languages,
 namely:
 
 **Definition (Recursively Enumerable Language)**
-Consider a language $L \subset \Sigma^{*}$. $L$ is called 
+Consider a language $L \subset \Sigma^*$. $L$ is called 
 *recursively enumerable* iff there exists a TM $L$ such that $L = L(M)$.
 
 The key observation to make here is that RE language definition makes no demands
-concerning what happens when $w\in \Sigma^{*}$ that is fed into $M$ 
+concerning what happens when $w\in \Sigma^*$ that is fed into $M$ 
 happens to be such that $w\notin L$.
 
 Clearly, we would like to have some guarantee about what happens 
@@ -117,7 +117,7 @@ We pick an alphabet of input symbols, e.g. $\Sigma = B = \{0, 1\}$.
 We cut out a slice $L$ of our (uncountable infinite binary) universe that 
 might happend to be a RE lang or a recusive lang.
 
-We then probe a word $w \in \Sigma^{*}$, e.g. $w=101100101101$, feed it into 
+We then probe a word $w \in \Sigma^*$, e.g. $w=101100101101$, feed it into 
 TM $M$ and watch what happens (possibly infinitely long).
 
 This diagram (courtesy of ChatGPT) can be of a little help:
@@ -147,7 +147,7 @@ is called *undecidable*.
 
 Taking stock of what we have discussed:
 - we picked an alphabet $\Sigma$
-- we then constructed all the strings that it permits i.e. $\Sigma^{*}$
+- we then constructed all the strings that it permits i.e. $\Sigma^*$
 - we considered what conditions a machine (Turing machine) should satisfy if we are to be ''comfortable'' about setting it in motion.
 
 We noted, that we want the procedure to terminate regardless of outcome.
