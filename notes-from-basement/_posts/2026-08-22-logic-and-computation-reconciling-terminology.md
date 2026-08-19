@@ -61,7 +61,7 @@ $p \in F$ is called the language of TM $L$ and it is denoted $L(M)$.
 Thinking rather abstractly, we have the universe of the string being members
 of the Kleene's closure before our eyes now. 
 
-We take a string $w \in \Sigma^{*}$, feed it into the TM $L$ and let it run. 
+We take a string $w\in \Sigma^{*}$, feed it into the TM $L$ and let it run. 
 When it so happens that the machine enters an accepting state $p \in F$ we 
 implicitly assume that it *comfortably* stops operating - i.e. that it halts.
 
@@ -73,11 +73,11 @@ Consider a language $L \subset \Sigma^*$. $L$ is called
 *recursively enumerable* iff there exists a TM $L$ such that $L = L(M)$.
 
 The key observation to make here is that RE language definition makes no demands
-concerning what happens when $w \in \Sigma*$ that is fed into $M$ 
-happens to be such that $w \notin L$.
+concerning what happens when $w\in \Sigma*$ that is fed into $M$ 
+happens to be such that $w\notin L$.
 
 Clearly, we would like to have some guarantee about what happens 
-when we feed $L$ a word $w \notin L$: what if, having started it, we wait 
+when we feed $L$ a word $w\notin L$: what if, having started it, we wait 
 for a long time? Under RE lang we have no assurance of success - we do not 
 want to find ourselves waiting for the proverbial Godot...
 
@@ -96,9 +96,9 @@ Therefore, the following definition feels natural:
 **Definition (Recursive Language)**
 Language $L$ is called *recursive* iff there exists a TM $M$ such that:
 
-(1) $ \forall w \in L$: $M$ accepts $w$
+(1) $\forall w\in L$: $M$ accepts $w$
 
-(2) $ \forall w \notin L$: $M$ halts, but never enters any accepting state when processing $w$
+(2) $\forall w\notin L$: $M$ halts, but never enters any accepting state when processing $w$
 
 Brief terminological remark is in order here: I am tacitly using the fact that 
 acceptance of a state means that the machine *halts* in that accepting state.
