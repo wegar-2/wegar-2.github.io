@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "(WiP) Logic and Computation - Reconciling (Some of) the Very Basic Terminology"
-date: 2026-08-20
+date: 2026-08-19
 category: notes-from-basement
 ---
 
