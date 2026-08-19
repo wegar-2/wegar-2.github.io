@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "(WiP) Logic and Computation - Clarifying the Very Basic Terminology"
-date: 2026-08-19
+title: "(WiP) Logic and Computation - Reconciling (Some of) the Very Basic Terminology"
+date: 2026-08-20
 category: notes-from-basement
 ---
 
-## Logic and Computation - Clarifying (Some of) the Very Basic Terminology
+## (WiP) Logic and Computation - Reconciling (Some of) the Very Basic Terminology
 
 ### 1. Intro
 
@@ -29,8 +29,17 @@ and Smith's  *Introduction*
 Certain sections of these books deal with concepts that are related but, given
 different authors and purposes, not easy to reconcile - at least on quick reading.
 
+So what I want to do seems to be an exercise in reverse-engineering of the underlying 
+currents of thought that led to the definitions I am interested in. 
 
-Let's start by taking the computational view.
+One can't help observing here, that although decoding of the great concepts 
+is already a challange, the formulation of a great concept such as 
+e.g. machine of Turing is many orders of magnitude further on the scale of
+difficulty - a compression problems of its own kind, requiring you to 
+put intuition into a limited number of words that then give rise to an ocean
+of deductions.
+
+Let's cut blabbering short here and get started by taking the computational view.
 
 ### 2. The Computational Perspective
 
@@ -45,15 +54,14 @@ The set of strings $w \in \Sigma^*$ such that $q_0 w \vdash\alpha p \beta$ where
 $p \in F$ is called the language of TM $L$ and it is denoted $L(M)$.
 
 Thinking rather abstractly, we have the universe of the string being members
-of the Kleene's closure before our eyes now. We take a string $w \in \Sigma^*$, 
-feed it into the TM $L$ and let it run. When it so happens, that the machine 
-enters an accepting state $p \in F$ we implicitly assume that it comfortable
-stops operating - i.e. that it halts.
+of the Kleene's closure before our eyes now. 
 
-One is, however, justified in asking now about what happens when the machine 
-just keeps running - regardless of whether 
+We take a string $w \in \Sigma^*$, feed it into the TM $L$ and let it run. 
+When it so happens that the machine enters an accepting state $p \in F$ we 
+implicitly assume that it *comfortably* stops operating - i.e. that it halts.
 
-Let's first look at the broader kind of TM languages, namely at:
+This brings us to the definition of the first, broad kind of TM languages, 
+namely:
 
 **Definition (Recursively Enumerable Language)**
 Consider a language $L \subset \Sigma^*$. $L$ is called 
@@ -70,7 +78,7 @@ want to find ourselves waiting for the proverbial Godot...
 
 This (reasonable) concern is addressed by imposing a requirement on the 
 behavior of the TM when we feed into it a word not in $L$. In order
-to feel slightly more comortable we want to know that the machine would stop 
+to feel slightly more comfortable we want to know that the machine would stop 
 in such scenario - or more precisely: halt. However, we are justified in asking about 
 *how* it might halt? Can it halt in any manner? Clearly, one can imagine
 a trajectory such that the machine passes through an accepting state when 
@@ -87,11 +95,25 @@ Language $L$ is called *recursive* iff there exists a TM $M$ such that:
 
 (2) $ \forall w \notin L$: $M$ halts, but never enters any accepting state when processing $w$
 
-Brief terminological remark is in order here: I am assuming 
-(following Ullman et al.) that the acceptance of the states means that the 
-machine halts in an accepting state.
+Brief terminological remark is in order here: I am tacitly using the fact that 
+acceptance of a state means that the machine *halts* in that accepting state.
 
-In other words, when dealing with a *recursive* language we have the comfort of 
+In other words, when dealing with a *recursive* language we have the
+certainty that the machine would halt - it is, so to speak, worth our wait in the 
+sense that we know it will halt, even if the run will take a lot of time e.g.
+the age of Universe.
+
+So the picture that we have before us can be summarized as follows.
+
+We pick an alphabet of input symbols, e.g. $\Sigma = B = \{0, 1\}$.
+
+We cut out a slice $L$ of our (uncountable infinite binary) universe that 
+might happend to be a RE lang or a recusive lang.
+
+We then probe a word $w \in \Sigma^*$, e.g. $w=101100101101$, feed it into 
+TM $M$ and watch what happens (possibly infinitely long).
+
+
 
 
 ### 3. The Logical Perspective
