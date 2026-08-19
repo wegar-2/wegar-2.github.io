@@ -3,5 +3,6 @@
 Observations, notes to self, etc.
 
 ## Posts
-
-No posts yet.
+{% for post in site.categories.notes-from-basement %}
+- [{{ post.title }}]({{ post.url }})
+{% endfor %}
