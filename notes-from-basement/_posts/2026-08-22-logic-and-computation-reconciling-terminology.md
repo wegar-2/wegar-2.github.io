@@ -114,7 +114,7 @@ the age of Universe.
 
 So the picture that we have before us can be summarized as follows.
 
-We pick an alphabet of input symbols, e.g. $\Sigma = B = \{0, 1\}$.
+We pick an alphabet of input symbols, e.g. $$\Sigma = B = \{0, 1\}$$.
 
 We cut out a slice $L$ of our (uncountable infinite binary) universe that 
 might happend to be a RE lang or a recusive lang.
@@ -220,9 +220,9 @@ A total, one-place function  $f: \Delta \rightarrow \Theta$ is called
 in a finite number of steps, the value of the function for *any* $x \in \Delta$.
 
 Let's simplify things a little bit here. 
-Taking $\Sigma$ to be the binary alphabet i.e.: $\Sigma = B = \{0, 1\}$,
+Taking $\Sigma$ to be the binary alphabet i.e.: $$\Sigma = B = \{0, 1\}$$,
 we have enough symbols to nicely represent the members of the set of 
-natural numbers $\mathbb{N} = \{0, 1, 2, ... \}$:
+natural numbers $$\mathbb{N} = \{0, 1, 2, ... \}$$:
 
 $$
 \begin{aligned}
@@ -246,7 +246,7 @@ $$
 There is one minor glitch here - the empty string $\epsilon$. 
 It can be easily handled by first mapping $B^{*}$ bijectively to 
 $$\mathbb{N}_+ = \{1, 2, 3, ...\}$$ 
-and then:
+and then
 $$\mathbb{N}_+$$ 
 to
 $$\mathbb{N}$$. 
