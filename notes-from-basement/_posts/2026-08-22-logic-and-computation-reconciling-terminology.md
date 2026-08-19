@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "(WiP) Logic and Computation - Reconciling (Some of) the Very Basic Terminology"
-date: 2026-08-20
+date: 2026-08-22
 category: notes-from-basement
 ---
 
@@ -15,16 +15,21 @@ put in place the basic terminology pertaining to computation and logic.
 My humble hope is that the process of writing these things down will help me 
 put things in the right order once and for all in my mind. 
 
-Also, I have neither hope nor intention of standardizing the terminology in the pertinent 
-literature - this is merely a note to self (or to whoever find him/herself
-in similar impasse - please be mindful that you are using this note at 
-your own risk as I am self-learner in both areas and have no formalized
-education in both areas to prop up my case).
+Also, I have neither hope nor intention of standardizing the terminology in the 
+pertinent literature - this is merely a note to self (or to whoever find 
+him/herself in similar impasse - please be mindful that you are using this note 
+at your own risk as I am self-learner in both areas and have no formalized
+education to prop up my authority on the matters discussed).
 
 In my case the predicament has arisen due to my (unintentional) simultaneous 
-reading of two excellent books - cf. [references](#reference): Ullman et 
-al. classic(al) *Introduction* 
-and Smith's  *Introduction*
+reading of two excellent (in my view, at least) books - cf. [references](#reference):
+
+(1) Hopcroft, Motwani and Ullman's *Introduction to Automata Theory, ...* - chapters 8 and 9. 
+
+(2) Peter Smith's *Introduction to G\odel's Theorems* - chapters 3 and 4.
+
+I will use abbreviations: HMU and ITGT when referring to, respectively, 
+(1) and (2) in this text.
 
 Certain sections of these books deal with concepts that are related but, given
 different authors and purposes, not easy to reconcile - at least on quick reading.
@@ -139,16 +144,54 @@ $\Pi$ us *decidable*.
 **Definition (Undecidable Problem)** Problem $\Pi$ that is not decidable 
 is called *undecidable*.
 
+Let's take stock of what we have gone through. We picked an alphabet $\Sigma$.
+We then constructed all the strings that it permits i.e. $\Sigma^*$.
 
-### 3. The Logical Perspective
 
-We will start by jumping straight into the following definition:
+We started by pick
+
+
+### 3. The Logical Perspective - Warm Up
+
+*ITGT* is a book that deals with formal theories. The chapters that 
+are of interest here introduce the relevant terminology. Given that 
+*words* of the natural language are used to *name* these concepts, one might
+get confused when jumping into the logical considerations having previously
+studied computation. 
+
+Before we move on, let's talk a little bit more about the notion of 
+*algorithm*. In chatper 3 of *ITGT* we have the following passage 
+(pp. 14-15):
+
+> What is meant by talkin of an *effective* computational procedure? The core
+> idea is that an effective computation involves (1) executing and *algorithm*
+> 1. An algorithm is a set ot step-by-step instructions (instructions which are
+> pinned down in advance of their execution), with each small step clearly
+> specified in every detail (leaving no room for doubt as to what does and 
+> what doesn't count as executing the step, and leaving no room for chance) 
+> (...) In sum, we might say that executing an algorithm is something that can 
+> be done by a suitable deterministic computing machine.
+> 2. But there's more: plainly, if executing an algorithm is actually to compute 
+a total function - i.e. a function which outputs a value for any relevant 
+> input(s) - then the procedure must *terminate* in a finite number of steps
+> for every input, and produce the right sort of output. Note, then, 
+> it isn't part of the very idea of an algorithm that its execution always 
+> terminates; so in general an algorithm might only compute a partial function.
+
+
+
+
+We will start by jumping straight into a definition:
 
 **Definition(Computable Function)** 
 
 
+### 4. The Logical Perspective - Abundance of Concepts
 
-### 4. Summary
+
+### 5. Summary of Observations
+
+### 6. Reconciled Terminology
 
 
 
