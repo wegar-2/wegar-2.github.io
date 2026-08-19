@@ -168,9 +168,9 @@ observation thus:
 
 $$
 \boxed{ 
-\text{algorithm for deciding $L$} 
+\text{algorithm for deciding }L 
 \Longleftrightarrow L\text{ is recursive} 
-\Longleftrightarrow \text{$L$ is decidable}}
+\Longleftrightarrow L\text{ is decidable}}
 $$
 
 
