@@ -4,7 +4,7 @@ title: "wegar-2"
 
 # Artur Wegrzyn
 
-I work in FX desk at mBank as e-trader/quant expert. 
+I work in FX spot desk at mBank as e-trader/quant expert. 
 
 Before that, I worked at Axpo Polska as a quant analyst, 
 developing ML models-based trading approaches for spot electricity markets, 
