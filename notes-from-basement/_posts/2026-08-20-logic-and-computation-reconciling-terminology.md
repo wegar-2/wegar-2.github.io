@@ -120,16 +120,31 @@ This diagram (courtesy of ChatGPT) can be of a little help:
 Having looked at the concepts (slightly) more formally, let's try to reconcile
 them with the intuitive idea of a decidable problem. 
 
-(Note: I am deliberately NOT discussing here how languages relate to problems
-- cf. Ullman for clarification if needed. ).
+(Note: I am deliberately NOT discussing here how languages relate to 
+problems - consult Ullman et al. for clarification if needed.)
 
+If our problem is such, that its language $L$ happens to be *recursive*, 
+we have the determinism in that we will (given enough time) get the answer 
+if we feed it into the TM $M$ such that $L = L(M)$. Given the nature 
+of the TM we might in such case say that we have an unquestionably clear
+set of rules that we need to follow in order to get the answer i.e. 
+we are dealing with an *algorithm*.
+
+Let's summarize these considerations by putting down the following definitions:
+
+**Definition(Decidable Problem)** If out problem $\Pi$ is represented by language $L$
+and there exists a TM $M$ such that $L=L(M)$, then we say that problem 
+$\Pi$ us *decidable*.
+
+**Definition (Undecidable Problem)** Problem $\Pi$ that is not decidable 
+is called *undecidable*.
 
 
 ### 3. The Logical Perspective
 
-We will start by jumping into the definition:
+We will start by jumping straight into the following definition:
 
-**Definition(Computable Function)**
+**Definition(Computable Function)** 
 
 
 
