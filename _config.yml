@@ -1,3 +1,8 @@
 title: wegar-2
 description: Notes and blogs
 theme: minima
+
+markdown: kramdown
+
+kramdown:
+  math_engine: mathjax
