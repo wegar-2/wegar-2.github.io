@@ -61,7 +61,7 @@ $p \in F$ is called the language of TM $L$ and it is denoted $L(M)$.
 Thinking rather abstractly, we have the universe of the string being members
 of the Kleene's closure before our eyes now. 
 
-We take a string $w \in \Sigma^*$, feed it into the TM $L$ and let it run. 
+We take a string $w \in \Sigma^{*}$, feed it into the TM $L$ and let it run. 
 When it so happens that the machine enters an accepting state $p \in F$ we 
 implicitly assume that it *comfortably* stops operating - i.e. that it halts.
 
