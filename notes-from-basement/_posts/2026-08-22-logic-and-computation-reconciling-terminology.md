@@ -71,7 +71,7 @@ This brings us to the definition of the first, broad kind of TM languages,
 namely:
 
 **Definition (Recursively Enumerable Language)**
-Consider a language $L \subset \Sigma^*$. $L$ is called 
+Consider a language $L \subset \Sigma^{*}$. $L$ is called 
 *recursively enumerable* iff there exists a TM $L$ such that $L = L(M)$.
 
 The key observation to make here is that RE language definition makes no demands
