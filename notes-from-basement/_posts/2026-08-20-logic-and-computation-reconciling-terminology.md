@@ -132,8 +132,8 @@ we are dealing with an *algorithm*.
 
 Let's summarize these considerations by putting down the following definitions:
 
-**Definition(Decidable Problem)** If out problem $\Pi$ is represented by language $L$
-and there exists a TM $M$ such that $L=L(M)$, then we say that problem 
+**Definition(Decidable Problem)** If out problem $\Pi$ is *represented* by language $L$
+and there exists a TM $M$ such that $L=L(M)$, we say that problem 
 $\Pi$ us *decidable*.
 
 **Definition (Undecidable Problem)** Problem $\Pi$ that is not decidable 
@@ -154,6 +154,7 @@ We will start by jumping straight into the following definition:
 
 <a id="reference"></a>
 ## References
-1. J. Ullman, Hopcroft et al., *Introduction to Automate Theory*
-2. P. Smith, **
-
+1. John E. Hopcroft, Rajeev Motwani, Jeffrey D. Ullman, 
+*Introduction to Automata Theory, Languages and Computation, 3rd Ed.*, 
+Pearson
+2. Peter Smith, *An Introduction to G\odel's Theorems, 2nd Ed.*, Logic Matters
