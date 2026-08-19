@@ -245,8 +245,12 @@ $$
 
 There is one minor glitch here - the empty string $\epsilon$. 
 It can be easily handled by first mapping $B^{*}$ bijectively to 
-$\mathbb{N}_+ = \{1, 2, 3, ...\}$ and then $\mathbb{N}_+$ to
-$\mathbb{N}$. The latter bijection is simply $p(n) = n - 1$ 
+$$\mathbb{N}_+ = \{1, 2, 3, ...\}$$ 
+and then:
+$$\mathbb{N}_+$$ 
+to
+$$\mathbb{N}$$. 
+The latter bijection is simply $p(n) = n - 1$ 
 ($p$ - predecessor).
 
 The former is:
