@@ -323,8 +323,8 @@ have or not. Suppose that $\varphi$ is a sentence of $T$.
 We say that:
 1. $T$ *decides* $\varphi$ if either $T \vdash \varphi$ or $T \vdash \neg\varphi$
 2. $T$ *correctly decides* $\varphi$ if:
-   1. if $\varphi$ is true, then $T \vdash \varphi$
-   2. if $\varphi$ is false, then $T \vdash \neg\varphi$
+   - if $\varphi$ is true, then $T \vdash \varphi$
+   - if $\varphi$ is false, then $T \vdash \neg\varphi$
 3. theory $T$ is *negation-complete* if it decides its every sentence $\varphi$
 4. theory $T$ is *inconsistent* if for some its sentence $\varphi$ one has 
 $T \vdash \varphi$ and $T \vdash \neg \varphi$
@@ -378,9 +378,9 @@ operate on our *formal language*.
 6. We carry over the idea of *decidability* to functions and get *effective computability*.
 When we carry it over to relations, properties and sets we get *effective decideability*.
 7. As the last step we carry over the *decidability* to *EAFT*s:
-   1. when applied to sentences of a theory, we speak of theory *deciding* a 
+   - when applied to sentences of a theory, we speak of theory *deciding* a 
    sentence by which we mean that there exists a proof of the sentence 
-   2. when applied to the whole *EAFT* we get the concept of *effectively decideable*
+   - when applied to the whole *EAFT* we get the concept of *effectively decideable*
    theory which is one for which we have an algorithm that allows us to determine 
    whether there is a proof of any sentence of the theory.
 
