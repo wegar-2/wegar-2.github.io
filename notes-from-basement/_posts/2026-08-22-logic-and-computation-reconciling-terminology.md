@@ -239,10 +239,7 @@ $$\mathbb{N}_+$$
 to
 $$\mathbb{N}$$. 
 The latter bijection is simply $p(n) = n - 1$ 
-($p$ - predecessor).
-
-The former is:
-
+($p$ - predecessor). The former is: <br>
 
 $$
 \begin{aligned}
