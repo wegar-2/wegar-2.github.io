@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "(WiP) Logic and Computation - Reconciling (Some of) the Very Basic Terminology"
-date: 2026-08-23
+title: "Logic and Computation - Reconciling (Some of) the Very Basic Terminology"
+date: 2026-08-20
 category: notes-from-basement
 ---
 
-## (WiP) Logic and Computation - Reconciling (Some of) the Very Basic Terminology
+## Logic and Computation - Reconciling (Some of) the Very Basic Terminology
 
 ### 1. Intro
 
@@ -281,7 +281,18 @@ It seems reasonable to try to reapply this method to properties next. For we mig
 reasonably say that the process of checking if an element has a certain property
 can be rephrased as feeding the binary representation of that element 
 to a TM and then getting $1$ it that element has the property in question 
-and $0$ otherwise.
+and $0$ otherwise. So it will not be an overstretch to accept the following
+definition:
+
+**Definition (Effectively Decidable Property)** Property is called 
+*effectively decidable* iff there exists a TM $M$ that returns $1$
+if the element whose representation is passed to it has the property and 
+returns $0$ otherwise.
+
+Analogous definitions can be given for: relations and set membership.
+The idea is that relation is just a property defined on a pair of elements,
+whereas set membership can be viewed as a property of membership of 
+a certain set. 
 
 #### 3.4. Effectively Axiomatized Formal Theory
 The investigations in *ITGT* revolve around the notion of 
@@ -335,8 +346,15 @@ do not now if there is a procedure for finding that proof. In other words
 it is one thing to say of a theory that it 
 
 Thirdly, note that there is accord between the intuitive concept of *decidability*
-between its use for *languages* and *EAFT*s. In the former case we have the certainty
-that if we run our TM on the input it will give us a solution. In the latter case
+between its use for *languages* and *EAFT*s. 
+
+In the former case we have the certainty that if we run our TM on the input 
+it will give us a solution. 
+
+In the latter case instead of dealing with strings representing inputs and 
+outputs we deal with sentences and their proofs. Instead of getting
+string representation in return we get string that is the proof of the 
+sentence we inquire about.
 
 ### 4. Summary
 
@@ -366,7 +384,6 @@ When we carry it over to relations, properties and sets we get *effective decide
    2. when applied to the whole *EAFT* we get the concept of *effectively decideable*
    theory which is one for which we have an algorithm that allows us to determine 
    whether there is a proof of any sentence of the theory.
-
 
 
 <a id="reference"></a>
