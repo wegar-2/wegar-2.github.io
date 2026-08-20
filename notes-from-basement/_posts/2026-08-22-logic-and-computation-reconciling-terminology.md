@@ -111,7 +111,7 @@ We then probe a word $w \in \Sigma^*$, e.g. $w=101100101101$, feed it into
 TM $M$ and watch what happens (possibly infinitely long).
 
 This diagram (courtesy of ChatGPT) can be of a little help:
-![diagram](../graphics/lang_euler_chart.png)
+![diagram](./assets/images/lang_euler_chart.png)
 
 Having looked at the concepts (slightly) more formally, let's try to reconcile
 them with the intuitive idea of a decidable problem. 
@@ -372,8 +372,8 @@ a TM $M$ such that $L = L(M)$. We say of a problem that corresponds to the
 language $L$ that it is decidable.
 3. Intuitively, computational decidability means that we have certainty
 that if we run our procedure, it will halt and yield the answer to out question.
-4. Switching to logic, we operate at the level of $metalanguage$ and 
-operate on our $formal language$. 
+4. Switching to logic, we operate at the level of *metalanguage* and 
+operate on our *formal language*. 
 5. We formalize the vague intuitive idea of *well-behaved* and 
 *deterministic in its basic behavior* theory by means of the concept *EAFT*.
 6. We carry over the idea of *decidability* to functions and get *effective computability*.
