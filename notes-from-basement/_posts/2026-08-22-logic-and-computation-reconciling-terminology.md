@@ -26,21 +26,21 @@ and there has been so much of it that I got confused.
 My humble hope is that the process of writing these things down will help me 
 put things in the right order once and for all in my mind.
 
-So what I am doing here is just patiently walking through the
-concepts from the two books and trying to grow intuition about them
-to the point in which they would hopefully fall into the right places.
+So what I am doing here is just to patiently walk through the
+concepts from the two books and try to build intuition about them.
 
 ### 2. The Computational Perspective
 
 To keep length of this text manageable I am assuming that the cornerstone
-of the broader story of computation, i.e. definition of *Turing machine* (TM) is a given.
+of the broader story of computation, i.e. definition of *Turing machine* (TM), 
+is a given.
 
 Let's start with the notion of *language of a Turing machine*:
 
 **Definition (language of a Turing Machine)**
 Let $M = (Q, \Sigma, \Gamma, \delta, q_0, F, B)$ be a Turing machine. 
 The set of strings $w \in \Sigma^*$ such that $q_0 w \vdash\alpha p \beta$ where
-$p \in F$ is called the language of TM $L$ and it is denoted $L(M)$.
+$p \in F$ is called *the language of TM* $L$ and it is denoted $L(M)$.
 
 Thinking rather abstractly, we have the universe of the strings that are
 members of the Kleene's closure of $\Sigma$ before our eyes now. 
@@ -48,8 +48,9 @@ members of the Kleene's closure of $\Sigma$ before our eyes now.
 We take a string: 
 $$w\in \Sigma^*$$
 feed it into a TM $L$ and let it run. 
-Note: when it so happens, that the machine enters an accepting state $p\in F$ we 
-implicitly assume that it *comfortably* stops operating - i.e. that it halts.
+
+(Note: when it so happens, that the machine enters an accepting state $p\in F$ we 
+implicitly assume that it *comfortably* stops operating - i.e. that it halts.)
 
 This brings us to the definition of the first, broad kind of TM languages, 
 namely:
@@ -77,13 +78,17 @@ in such scenario - or more precisely: halt.
 However, we are justified in asking about 
 *how* it might halt? Can it halt in any manner? Clearly, one can imagine
 a trajectory such that the machine passes through an accepting state when 
-processing. Even worse: the danger of it halting in an accepting state is 
-looming! 
+processing. 
 
-Luckily, this would contradiction with the earlier definition of the very 
-language we are considering. 
+Even worse: the danger of it halting in an accepting state is 
+looming! Luckily, this would contradiction with the earlier definition of the very 
+language we are considering.
 
-Therefore, the following definition feels natural:
+Furthermore, let's agree that the acceptance of a state means that the 
+machine *halts* in that accepting state.
+
+Now, to address our concern we might are inclined to accept the following 
+definition of a more ''secure'' language:
 
 **Definition (Recursive Language)**
 Language $L$ is called *recursive* iff there exists a TM $M$ such that:
@@ -92,17 +97,14 @@ Language $L$ is called *recursive* iff there exists a TM $M$ such that:
 
 (2) $\forall w\notin L$: $M$ halts, but never enters any accepting state when processing $w$
 
-Brief terminological remark is in order here: I am tacitly using the fact that 
-acceptance of a state means that the machine *halts* in that accepting state.
-
 In other words, when dealing with a *recursive* language we have the
 certainty that the machine would halt - it is, so to speak, worth our wait in the 
-sense that we know it will halt, even if the run will take a lot of time e.g.
-the age of Universe.
+sense that we know it will halt at some future point, even if the run will 
+take a lot of time e.g. the age of Universe for that to happen.
 
 So the picture that we have before us can be summarized as follows.
 
-We pick an alphabet of input symbols, e.g. $$\Sigma = B = \{0, 1\}$$.
+We pick an alphabet of input symbols, e.g. $$\Sigma = B = \{0, 1\}$$
 
 We cut out a slice $L$ of our (uncountable infinite binary) universe that 
 might happend to be a RE lang or a recusive lang.
@@ -117,19 +119,21 @@ Having looked at the concepts (slightly) more formally, let's try to reconcile
 them with the intuitive idea of a decidable problem. 
 
 (Note: I am deliberately NOT discussing here how languages relate to 
-problems - consult Ullman et al. for clarification if needed.)
+problems - consult *HMU* for clarification if needed.)
 
 If our problem is such, that its language $L$ happens to be *recursive*, 
-we have the determinism in that we will (given enough time) get the answer 
-if we feed it into the TM $M$ such that $L = L(M)$. Given the nature 
-of the TM we might in such case say that we have an unquestionably clear
-set of rules that we need to follow in order to get the answer i.e. 
-we are dealing with an *algorithm*.
+we have the certainty that we will (given enough time) get the answer 
+if we feed out questions into a TM $M$ such that $L = L(M)$. 
+
+Given the nature of the TM we might in such case say that we have an 
+unquestionably clear set of rules that we need to follow in order to get 
+the answer i.e. we are dealing with what we would intuitively call 
+an *algorithm*.
 
 Let's summarize these considerations by putting down the following definitions:
 
-**Definition(Decidable Problem)** If out problem $\Pi$ is *represented* by language $L$
-and there exists a TM $M$ such that $L=L(M)$, we say that problem 
+**Definition(Decidable Problem)** If out problem $\Pi$ is *represented* by 
+language $L$ and there exists a TM $M$ such that $L=L(M)$, we say that problem 
 $\Pi$ us *decidable*.
 
 **Definition (Undecidable Problem)** Problem $\Pi$ that is not decidable 
@@ -138,7 +142,8 @@ is called *undecidable*.
 Taking stock of what we have discussed:
 - we picked an alphabet $\Sigma$
 - we then constructed all the strings that it permits i.e. $\Sigma^*$
-- we considered what conditions a machine (Turing machine) should satisfy if we are to be ''comfortable'' about setting it in motion.
+- we considered what conditions a machine (Turing machine) should satisfy 
+if we are to feel ''comfortable'' about setting it in motion.
 
 We noted, that we want the procedure to terminate regardless of outcome.
 To quote HMU themselves (section 9.2.1, p. 349):
@@ -154,7 +159,7 @@ To quote HMU themselves (section 9.2.1, p. 349):
 > frequently, then problem $L$ is called *decidable* if it is a recursive
 > language, and it is called *undecidable* if it is not a recursive langugage. 
 
-So what we clearly see is that HMU clearly associate the notion of *algorithm*
+So what we see is that HMU clearly associate the notion of *algorithm*
 with the certainty as to the occurrence of *halting*. Let's record this
 observation thus:
 
@@ -169,10 +174,9 @@ $$
 ### 3. The Logical Perspective
 
 *ITGT* is a book that deals with formal theories. The chapters that 
-are of interest here introduce the relevant terminology. Given that 
-*words* of the natural language are used to *name* these concepts, one might
-get confused when jumping into the logical considerations having previously
-studied computation. 
+are of interest here (3 and 4) introduce the relevant terminology. Given that 
+*words* of the natural language used by computation theory and logic are
+simply similar, one needs to be stay alert.
 
 #### 3.1 Concerning the Notion of *Algorithm*
 
@@ -180,7 +184,7 @@ Let's take off by talking a little bit more about the notion of
 *algorithm*. In chatper 3 of *ITGT* we have the following passage 
 (pp. 14-15):
 
-> What is meant by talkin of an *effective* computational procedure? The core
+> What is meant by talking of an *effective* computational procedure? The core
 > idea is that an effective computation involves (1) executing and *algorithm*
 > 1. An algorithm is a set ot step-by-step instructions (instructions which are
 > pinned down in advance of their execution), with each small step clearly
@@ -200,14 +204,15 @@ what is meant by *algorithm*.
 
 #### 3.2 Effective Computability
 
-We will start by quoting definition of *effectively computable function* from *ITGT*:
+We will start by quoting definition of *effectively computable function* from 
+*ITGT*:
 
 **Definition (Effectively Computable Function)** 
 A total, one-place function  $f: \Delta \rightarrow \Theta$ is called 
 *effectively computable* iff there is an *algorithm* which can be used to calculate,
 in a finite number of steps, the value of the function for *any* $x \in \Delta$.
 
-Let's simplify things a little bit here. 
+Let's try to connect this with our earlier discussion. 
 Taking $\Sigma$ to be the binary alphabet i.e.: $$\Sigma = B = \{0, 1\}$$,
 we have enough symbols to nicely represent the members of the set of 
 natural numbers $$\mathbb{N} = \{0, 1, 2, ... \}$$:
@@ -224,7 +229,7 @@ $$
 \end{aligned}
 $$
 
-Observe that we have an obvious bijection between set of non-empty binary 
+Observe that we have an obvious bijection between the set of non-empty binary 
 strings $B^{+}$ and the set $\mathbb{N}$ - given $w \in B^{+}$:
 
 $$
