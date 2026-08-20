@@ -242,6 +242,8 @@ The latter bijection is simply $p(n) = n - 1$
 ($p$ - predecessor).
 
 The former is:
+
+
 $$
 \begin{aligned}
 \epsilon & \longleftrightarrow (1\epsilon)_2 = 1_{10} \\
