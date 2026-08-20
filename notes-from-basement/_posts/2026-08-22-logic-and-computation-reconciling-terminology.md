@@ -9,62 +9,46 @@ category: notes-from-basement
 
 ### 1. Intro
 
-In this post I am writing down a (hopefully) clarifying note that will help me 
-put in place the basic terminology pertaining to computation and logic.
-
-My humble hope is that the process of writing these things down will help me 
-put things in the right order once and for all in my mind. 
-
-Also, I have neither hope nor intention of standardizing the terminology in the 
-pertinent literature - this is merely a note to self (or to whoever find 
-him/herself in similar impasse - please be mindful that you are using this note 
-at your own risk as I am self-learner in both areas and have no formalized
-education to prop up my authority on the matters discussed).
-
-In my case the predicament has arisen due to my (unintentional) simultaneous 
-reading of two excellent (in my view, at least) books - cf. [references](#reference):
+In this post I attempt to clarify the basic terminology pertaining to 
+computation and logic. What I mean by this is that I have come across a lot of
+important terminology while reading two excellent (in my view, at least) 
+books - cf. [references](#reference):
 
 (1) Hopcroft, Motwani and Ullman's *Introduction to Automata Theory, ...* - chapters 8 and 9. 
 
 (2) Peter Smith's *Introduction to Godel's Theorems* - chapters 3 and 4.
 
-I will use abbreviations: *HMU* and *ITGT* when referring to, respectively, 
-(1) and (2) in this text.
+and there has been so much of it that I got confused.
 
-Certain sections of these books deal with concepts that are related but, given
-different authors and purposes, not easy to reconcile - at least on quick reading.
+(Note: I will use abbreviations: *HMU* and *ITGT* when referring to, respectively, 
+(1) and (2) in this text.)
 
-So what I want to do seems to be an exercise in reverse-engineering of the underlying 
-currents of thought that led to the definitions I am interested in. 
+My humble hope is that the process of writing these things down will help me 
+put things in the right order once and for all in my mind.
 
-One can't help observing here, that although decoding of the great concepts 
-is already a challange, the formulation of a great concept such as 
-e.g. machine of Turing is many orders of magnitude further on the scale of
-difficulty - a compression problems of its own kind, requiring you to 
-put intuition into a limited number of words that then give rise to an ocean
-of deductions.
-
-Let's cut blabbering short here and get started by taking the computational view.
+So what I am doing here is just patiently walking through the
+concepts from the two books and trying to grow intuition about them
+to the point in which they would hopefully fall into the right places.
 
 ### 2. The Computational Perspective
 
 To keep length of this text manageable I am assuming that the cornerstone
-of the broader story, i.e. definition of *Turing machine* (TM) is given.
+of the broader story of computation, i.e. definition of *Turing machine* (TM) is a given.
 
-First, we will need to define language of a Turing machine:
+Let's start with the notion of *language of a Turing machine*:
 
 **Definition (language of a Turing Machine)**
 Let $M = (Q, \Sigma, \Gamma, \delta, q_0, F, B)$ be a Turing machine. 
 The set of strings $w \in \Sigma^*$ such that $q_0 w \vdash\alpha p \beta$ where
 $p \in F$ is called the language of TM $L$ and it is denoted $L(M)$.
 
-Thinking rather abstractly, we have the universe of the string being members
-of the Kleene's closure before our eyes now. 
+Thinking rather abstractly, we have the universe of the strings that are
+members of the Kleene's closure of $\Sigma$ before our eyes now. 
 
 We take a string: 
 $$w\in \Sigma^*$$
-feed it into the TM $L$ and let it run. 
-When it so happens that the machine enters an accepting state $p\in F$ we 
+feed it into a TM $L$ and let it run. 
+Note: when it so happens, that the machine enters an accepting state $p\in F$ we 
 implicitly assume that it *comfortably* stops operating - i.e. that it halts.
 
 This brings us to the definition of the first, broad kind of TM languages, 
@@ -78,7 +62,7 @@ $L$ is called
 
 The key observation to make here is that RE language definition makes no demands
 concerning what happens when $w\in \Sigma^*$ that is fed into $M$ 
-happens to be such that $w\notin L$.
+happens to be such that $w\notin L$.  
 
 Clearly, we would like to have some guarantee about what happens 
 when we feed $L$ a word $w\notin L$: what if, having started it, we wait 
@@ -88,12 +72,16 @@ want to find ourselves waiting for the proverbial Godot...
 This (reasonable) concern is addressed by imposing a requirement on the 
 behavior of the TM when we feed into it a word not in $L$. In order
 to feel slightly more comfortable we want to know that the machine would stop 
-in such scenario - or more precisely: halt. However, we are justified in asking about 
+in such scenario - or more precisely: halt. 
+
+However, we are justified in asking about 
 *how* it might halt? Can it halt in any manner? Clearly, one can imagine
 a trajectory such that the machine passes through an accepting state when 
 processing. Even worse: the danger of it halting in an accepting state is 
-looming! Luckily, this would contradiction with the earlier 
-definition of the very language we are considering. 
+looming! 
+
+Luckily, this would contradiction with the earlier definition of the very 
+language we are considering. 
 
 Therefore, the following definition feels natural:
 
