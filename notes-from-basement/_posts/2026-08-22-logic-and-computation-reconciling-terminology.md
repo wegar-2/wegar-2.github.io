@@ -281,7 +281,7 @@ In the former paragraph we took computational *decidability* (i.e. the notion
 of decidable language) and carried it over to functions (and functions on a 
 subset of natural numbers in particular).
 
-It seems reasonable to try to reapply this method to properties next. For we might
+It seems reasonable to try to reapply this method to properties. For we might
 reasonably say that the process of checking if an element has a certain property
 can be rephrased as feeding the binary representation of that element 
 to a TM and then getting $1$ it that element has the property in question 
