@@ -19,7 +19,7 @@ application of Vanna-Volga method to valuation of EURPLN barrier options.
 
 You can contact me via email: [awegrzyn17@gmail.com](mailto:awegrzyn17@gmail.com)
 
-I speak Polish, English (C1), German (B2) and spoke Spanish B2 many years ago.
+I speak Polish (native), English (C1), German (B2) and spoke B2 Spanish many years ago.
 
 ## Content
 
