@@ -285,7 +285,15 @@ established a connection with the computational perspective in which we viewed
 in the case at hand: processors familiar binary strings.
 
 #### 3.3 Effective Decidability
+In the former paragraph we took computational *decidability* (i.e. the notion
+of decidable language) and carried it over to functions (and functions on a 
+subset of natural numbers in particular).
 
+It seems reasonable to try to reapply this method to properties next. For we might
+reasonably say that the process of checking if an element has a certain property
+can be rephrased as feeding the binary representation of that element 
+to a TM and then getting $1$ it that element has the property in question 
+and $0$ otherwise.
 
 #### 3.4. Effectively Axiomatized Formal Theory
 The investigations in *ITGT* revolve around the notion of 
@@ -311,8 +319,66 @@ the conditions. Let's briefly note that
 
 #### 3.5. Cornucopia of Properties (of an *EAFT*)
 
+In section 4.4 Smith defines multiple properties that any given *EAFT* $T$ might
+have or not. Suppose that $\varphi$ is a sentence of $T$.
 
-### 5. Reconciled Terminology
+We say that:
+1. $T$ *decides* $\varphi$ if either $T \vdash \varphi$ or $T \vdash \neg\varphi$
+2. $T$ *correctly decides* $\varphi$ if:
+   1. if $\varphi$ is true, then $T \vdash \varphi$
+   2. if $\varphi$ is false, then $T \vdash \neg\varphi$
+3. theory $T$ is *negation-complete* if it decides its every sentence $\varphi$
+4. theory $T$ is *inconsistent* if for some its sentence $\varphi$ one has 
+$T \vdash \varphi$ and $T \vdash \neg \varphi$
+5. theory $T$ is sound if whenever $T \vdash \varphi$, then $T \vDash \varphi$, 
+i.e. every theorem of $T$ is true
+6. theory $T$ is *effectively decidable* iff there is an algorithm that 
+determines whether $T \vdash \varphi$ for any sentence $\varphi$ of $T$
+
+Firstly, observe that act of *deciding* in the context of an *EAFT*
+is used to capture the idea that in the theory at hand there is a proof 
+of either $\varphi$ or $\neg \varphi$. Furthermore, given that in logic 
+we deal with semantic and syntactic aspects we have a separate concepts of 
+*correctly deciding*: it allows us to capture the idea of syntactic proof
+being in accord with semantic truth.
+
+Secondly, observe that the even if $T$ decides a sentence $\varphi$, we still
+do not now if there is a procedure for finding that proof. In other words 
+it is one thing to say of a theory that it 
+
+Thirdly, note that there is accord between the intuitive concept of *decidability*
+between its use for *languages* and *EAFT*s. In the former case we have the certainty
+that if we run our TM on the input it will give us a solution. In the latter case
+
+### 4. Summary
+
+The root of confusion seems to be caused by the richness of terminology both 
+on computational and logical sides.
+
+However, if we consider these concepts patiently and one-by-one we see that
+both vantage points are consistent. 
+
+Our investigation can be summarized thus: 
+1. We start with the notion of Turing machine.
+2. We have observed that the intuitive notion of *algorithm* is best expressed 
+by the concept of *recursive language* $L$, i.e. a language for which there exists
+a TM $M$ such that $L = L(M)$. We say of a problem that corresponds to the 
+language $L$ that it is decidable.
+3. Intuitively, computational decidability means that we have certainty
+that if we run our procedure, it will halt and yield the answer to out question.
+4. Switching to logic, we operate at the level of $metalanguage$ and 
+operate on our $formal language$. 
+5. We formalize the vague intuitive idea of *well-behaved* and 
+*deterministic in its basic behavior* theory by means of the concept *EAFT*.
+6. We carry over the idea of *decidability* to functions and get *effective computability*.
+When we carry it over to relations, properties and sets we get *effective decideability*.
+7. As the last step we carry over the *decidability* to *EAFT*s:
+   1. when applied to sentences of a theory, we speak of theory *deciding* a 
+   sentence by which we mean that there exists a proof of the sentence 
+   2. when applied to the whole *EAFT* we get the concept of *effectively decideable*
+   theory which is one for which we have an algorithm that allows us to determine 
+   whether there is a proof of any sentence of the theory.
+
 
 
 <a id="reference"></a>
