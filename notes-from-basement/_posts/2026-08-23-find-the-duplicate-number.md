@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Find The Duplicate Number - Why Does The Solution Work?"
-date: 2026-08-23
+date: 2026-08-21
 category: notes-from-basement
 ---
 
@@ -17,7 +17,7 @@ analyzed sufficiently formally for my liking.
 So what I am going to to here is go over the top with notation
 and see where this takes me.
 
-### A little bit of notation
+### Notation
 The array of length $n+1$ that we are given is best viewed as mapping 
 from the set $A = \{ 0, 1, 2, \dots, n \}$ into 
 $B = \{1, 2, \dots, n\}$.
@@ -34,6 +34,25 @@ $$
 Note that any number except $0$ might be mapped to itself. 
 
 Let $d \in B$ be the duplicate number that we are looking for.
+
+### Example
+
+It's always instructive to consider a specific case. Let $f$ be the mapping
+define by the table:
+$$
+\begin{array}{c|ccc}
+n    & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\hline
+f(n) & 1 & 2 & 3 & 2 & 4 & 6 & 7 & 5
+\end{array}
+$$
+
+In this case $A = \{ 0, 1, 2, \dots 7 \}$, $B = \{ 1, 2, \dots , 6 \}$ and $d = 2$.
+
+There are two closed ''cycles''':
+- 1-element cycle of $4$ into itself: $4 \rightarrow 4 \rightarrow \dots $
+- 3-element cycle: $5 \rightarrow 6 \rightarrow 7 \rightarrow 5 \rightarrow \dots $
+
 
 ### Straightforward Approach
 
@@ -53,7 +72,7 @@ The set of values of $f$ is finite with $|A| = n + 1 < |B| = n$.
 By the pigeonhole principle we immediately get:
 
 $$
-\exists k, l \in A: f(k) = f(l) = d
+\exists k, l \in A: f(n_1) = f(n_2) = d
 $$
 
 What we can say at this point is that $d$ exists, i.e. we validated that
@@ -78,42 +97,27 @@ Observe that we have: $b_{i-1} \neq b_{j-1}$. Suppose this was not the case, i.e
 that we have $b_{i-1} = b_{j-1}$ - this would immediately contradict the 
 assumption that $(i, j)$ is the first pair for which we have repetition.
 
-### 
+### A Different Take
 
-### Are we Really Sure that We're in the Right Orbit
+Let's start anew. We want to show that the duplicate number will be found
+if we start iterating from $0$.
 
-One can stay skeptical and say the following. Suppose that we  
+Let $\Theta \subseteq A$ be the set of values of the sequence starting from $0$:
 
-### Problem with Orbits
-
-Pondering various possibilities that arise we might notice that it is possible
-for a cycle to arise in the transformation in a manner akin to cycles in the 
-proper permutation - consider e.g. the following particular case:
-
-$$
-\begin{array}{c|ccc}
-n    & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
-\hline
-f(n) & 1 & 2 & 3 & 2 & 4 & 6 & 7 & 5
-\end{array}
+$$ 
+\Theta = \{ n \in B : \exists l \in \mathbb{N}_{+}:n = f^{(l)}(0)  \} \cup\{ 0 \}  
 $$
 
-There are two closed cycles:
-- 1-element cycle of $4$ into itself: $4 \rightarrow 4 \rightarrow \dots $
-- 3-element cycle: $5 \rightarrow 6 \rightarrow 7 \rightarrow 5 \rightarrow \dots $
+Define $\Theta_{+} = \Theta - \{0\}$
 
-Note that what happens is that in such closed cycles that do not start at zero we 
-cannot have two distinct numbers being mapped to the same number.  
+Let $|\Theta| = m \leq n$.
 
-For suppose it was otherwise. 
+Suppose that $d \notin \Theta$. We then have $m < n$. 
 
-### Pigeonhole Principle
+By the pigeonhole principle applied to $\Theta_{+}$ we have that $m - 1$
+numbers are mapped to $m$ numbers: $m$ members of $\Theta$ are mapped to $\Theta_{+}$.
 
-Suppose that we take the original mapping $f: A \rightarrow B$ and remove from
-it all the closed cycles. 
+This contradicts the pigeonhole principle, hence the assumption that $0$ 
+is in a different cycle has to be rejected.
 
-We are then left with mapping: $f': A' \rightarrow B'$ such that $0 \in A'$.
-
-The key to understanding why the search has to start at $0$ is the 
-
-
+And that's it, I convinced myself now.
