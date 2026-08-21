@@ -5,24 +5,26 @@ date: 2026-08-21
 category: notes-from-basement
 ---
 
-### The Problem
+### 1. Problem Statement
 
 Recall the Leetcode [Find the Duplicate Number Problem](https://leetcode.com/problems/find-the-duplicate-number/description/).
 It is a classic use case for [Floyd's cycle dedection algorithm](https://cp-algorithms.com/others/tortoise_and_hare.html).
 
-### Lots of Notational Fuss About Nothing
+### 2. Lots of Notational Fuss About Nothing
 As it happens to be the case with many other Leetcode problems that 
 have an interesting mathematical aspect, this one is rarely 
 analyzed sufficiently formally for my liking. 
 So what I am going to to here is go over the top with notation
 and see where this takes me.
 
-### Notation
+### 3. Notation
 The array of length $n+1$ that we are given is best viewed as mapping 
 from the set $A = \{ 0, 1, 2, \dots, n \}$ into 
 $B = \{1, 2, \dots, n\}$.
 
 The general case can be written down thus:
+
+
 $$
 \begin{array}{c|ccc}
 n    & 0 & 1 & 2 & 3 & \cdots & n \\
@@ -35,10 +37,12 @@ Note that any number except $0$ might be mapped to itself.
 
 Let $d \in B$ be the duplicate number that we are looking for.
 
-### Example
+### 4. Example
 
 It's always instructive to consider a specific case. Let $f$ be the mapping
 define by the table:
+
+
 $$
 \begin{array}{c|ccc}
 n    & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
@@ -47,14 +51,14 @@ f(n) & 1 & 2 & 3 & 2 & 4 & 6 & 7 & 5
 \end{array}
 $$
 
-In this case $A = \{ 0, 1, 2, \dots 7 \}$, $B = \{ 1, 2, \dots , 6 \}$ and $d = 2$.
+In this case $$A = \{ 0, 1, 2, \dots 7 \}$$, $$B = \{ 1, 2, \dots , 6 \}$$ and $d = 2$.
 
 There are two closed ''cycles''':
 - 1-element cycle of $4$ into itself: $4 \rightarrow 4 \rightarrow \dots $
 - 3-element cycle: $5 \rightarrow 6 \rightarrow 7 \rightarrow 5 \rightarrow \dots $
 
 
-### Straightforward Approach
+### 5. Proof I: Straightforward Approach
 
 Let's start at $0$ and just keep applying $f$ over and over again.
 
@@ -97,7 +101,7 @@ Observe that we have: $b_{i-1} \neq b_{j-1}$. Suppose this was not the case, i.e
 that we have $b_{i-1} = b_{j-1}$ - this would immediately contradict the 
 assumption that $(i, j)$ is the first pair for which we have repetition.
 
-### A Different Take
+### 6. Proof II: A Different use of Pigeonhole Principle
 
 Let's start anew. We want to show that the duplicate number will be found
 if we start iterating from $0$.
