@@ -10,18 +10,19 @@ category: notes-from-basement
 Recall the Leetcode [Find the Duplicate Number Problem](https://leetcode.com/problems/find-the-duplicate-number/description/).
 It is a classic use case for [Floyd's cycle dedection algorithm](https://cp-algorithms.com/others/tortoise_and_hare.html).
 
+### Lots of Notational Fuss About Nothing
 As it happens to be the case with many other Leetcode problems that 
 have an interesting mathematical aspect, this one is rarely 
-analyzed formally. And that's exactly what I want to provide here.
+analyzed sufficiently formally for my liking. 
+So what I am going to to here is go over the top with notation
+and see where this takes me.
 
-### Permutations Come To Mind
-
+### A little bit of notation
 The array of length $n+1$ that we are given is best viewed as mapping 
 from the set $A = \{ 0, 1, 2, \dots, n \}$ into 
 $B = \{1, 2, \dots, n\}$.
 
 The general case can be written down thus:
-
 $$
 \begin{array}{c|ccc}
 n    & 0 & 1 & 2 & 3 & \cdots & n \\
@@ -31,8 +32,57 @@ f(n) & a_0 & a_1 & a_2 & a_3 &\cdots & a_n
 $$
 
 Note that any number except $0$ might be mapped to itself. 
-Let's assume that the number $k \in B$ is the duplicate number that we are looking for.
 
+Let $d \in B$ be the duplicate number that we are looking for.
+
+### Straightforward Approach
+
+Let's start at $0$ and just keep applying $f$ over and over again.
+
+Let $(b_n)$ be the resulting sequence:
+$$
+b_0 = 0 \rightarrow f(0) \rightarrow f(f(0)) \rightarrow f(f(f(0))) \rightarrow \dots  
+$$
+
+We have:
+$$
+b_m = f^{(m)}(0)
+$$
+
+The set of values of $f$ is finite with $|A| = n + 1 < |B| = n$. 
+By the pigeonhole principle we immediately get:
+
+$$
+\exists k, l \in A: f(k) = f(l) = d
+$$
+
+What we can say at this point is that $d$ exists, i.e. we validated that
+the problem is correctly stated.
+
+Moreover, after departing from $0$, we move from one member of 
+the set $B$ to another, since $0$ is transformed into member of $B$ and then
+any member of $B$ is mapped to another member of $B$: $\forall n \in B: f(n) \in B$.
+
+Since $B$ is finite, if we just keep composing $f$ with itself, 
+we will get the first pair of indexes $(i, j)$ with $0 < i < j$, such that:
+
+$$
+f^{(i)}(0) = b_i = b_j = f^{(j)}(0) =: d
+$$
+
+What we now have is that both: $b_{i-1}$ and $b_{j-1}$
+have the same duplicate natural $d$ as their successor which is the
+number we are looking for.
+
+Observe that we have: $b_{i-1} \neq b_{j-1}$. Suppose this was not the case, i.e.
+that we have $b_{i-1} = b_{j-1}$ - this would immediately contradict the 
+assumption that $(i, j)$ is the first pair for which we have repetition.
+
+### 
+
+### Are we Really Sure that We're in the Right Orbit
+
+One can stay skeptical and say the following. Suppose that we  
 
 ### Problem with Orbits
 
