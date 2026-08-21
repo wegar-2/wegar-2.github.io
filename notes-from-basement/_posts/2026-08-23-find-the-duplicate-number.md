@@ -112,9 +112,9 @@ $$
 \Theta = \{ n \in B : \exists l \in \mathbb{N}_{+}:n = f^{(l)}(0)  \} \cup\{ 0 \}  
 $$
 
-Define $\Theta_{+} = \Theta - \{0\}$
+Define $$\Theta_{+} := \Theta - \{0\}$$
 
-Let $|\Theta| = m \leq n$.
+Let $$ | \Theta | = m \leq n$$.
 
 Suppose that $d \notin \Theta$. We then have $m < n$. 
 
