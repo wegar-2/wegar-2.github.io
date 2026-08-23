@@ -79,14 +79,34 @@ $$
 \frac{A, A \rightarrow B}{B}
 $$
 
+### Example of a Deduction in $KPL$
+
+To make things more tangible, let's check if we can prove if 
+$\neg B, A \rightarrow B \vdash \neg A$.
+
+1. $(A \rightarrow B) \rightarrow ((A \rightarrow \neg B) \rightarrow \neg A) $ (instance of ax. sch. (9))
+2. $A \rightarrow B$ (given assumption)
+3. $(A \rightarrow \neg B) \rightarrow \neg A$ (modus ponens on 1. and 2.)
+4. $\neg B$ (given assumption)
+5. $\neg B \rightarrow (A \rightarrow \neg B)$ (instance of ax. sch. (1))
+6. $A \rightarrow \neg B$ (modus ponens on 4. and 5.)
+7. $\neg A$ (modus ponens on 3. and 6.)
+
 
 ### Axiom Schemata - Intuition
 
-One has right to inquire why Kleene picked this selection of axiom schemata
+One has right to inquire why Kleene this particular selection of axiom schemata.
 
-### Example of a Deduction in $KPL$
+Schemata (3) - (5): allow for handling introduction and elimination of conjunction.
+Axiom schemata (6) - (8) do the same for (inclusive) disjunction and
+(11) - (13) for equivalence.  
 
-To make things more tangible, let's look 
+(10) is the vehicle for removing double negation.
+
+As for (9) - this allows for law of contrapositive - cf. Example above.
+
+
+ 
 
 
 <a id="reference"></a>
