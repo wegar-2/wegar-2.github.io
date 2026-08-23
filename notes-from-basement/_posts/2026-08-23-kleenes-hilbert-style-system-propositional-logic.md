@@ -24,7 +24,7 @@ to have a reference to point to later on.
 Uppercase letters from the later part of the Latin alphabet ($P, Q, R, \dots$)
 are used to denote atomic formulae, whereas the uppercase letter 
 from the early part of that alphabet ($A, B, C, \dots$) 
-are used to denote any formulae, 
+are used to denote *any* formulae.
 
 The notation for logical operators used here differ from those used by Kleene:
 - $\wedge$ - conjunction (Kleene uses $\&$)
@@ -129,7 +129,8 @@ then this formula is materially implied by any formula (which agrees with
 *semantic* view of material implication)
 
 Regarding (2): this axiom schemata allows for showing transitivity of material implication - cf. Example 2. 
- 
+Also, this one plays vital role in proving the deduction theorem - cf. 
+*Introduction to Metamathematics*. 
 
 
 <a id="reference"></a>
