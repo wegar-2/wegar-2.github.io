@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kleene's Hilbert-Style System of Propositional Logic"
-date: 2026-08-24
+date: 2026-08-23
 category: notes-from-basement
 ---
 
