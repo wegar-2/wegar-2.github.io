@@ -16,7 +16,7 @@ The system is introduced and used in the two
 books on logic and metamathematics (cf [references](#references))
 by [Stephen C. Kleene](https://en.wikipedia.org/wiki/Stephen_Cole_Kleene).
 
-As I find the system particularly handy to work with, I want 
+As I find the system very convenient to work with, I want 
 to have a reference to point to later on.
 
 ### Notation
@@ -29,7 +29,7 @@ are used to denote any formulae,
 The notation for logical operators used here differ from those used by Kleene:
 - $\wedge$ - conjunction (Kleene uses $\&$)
 - $\lor$ - disjunction
-- $\rightarrow$ - conditional statement (Kleene uses $\supset$)
+- $\rightarrow$ - conditional statement aka material implication (Kleene uses $\supset$)
 - $\neg$ - negation
 - $\leftrightarrow$ - equivalence
 
@@ -79,18 +79,37 @@ $$
 \frac{A, A \rightarrow B}{B}
 $$
 
-### Example of a Deduction in $KPL$
+### Example 1 of a Deduction in $KPL$
 
 To make things more tangible, let's check if we can prove if 
 $\neg B, A \rightarrow B \vdash \neg A$.
 
 1. $(A \rightarrow B) \rightarrow ((A \rightarrow \neg B) \rightarrow \neg A) $ (instance of ax. sch. (9))
-2. $A \rightarrow B$ (given assumption)
+2. $A \rightarrow B$ (assmptn.)
 3. $(A \rightarrow \neg B) \rightarrow \neg A$ (modus ponens on 1. and 2.)
-4. $\neg B$ (given assumption)
+4. $\neg B$ (assmptn.)
 5. $\neg B \rightarrow (A \rightarrow \neg B)$ (instance of ax. sch. (1))
 6. $A \rightarrow \neg B$ (modus ponens on 4. and 5.)
 7. $\neg A$ (modus ponens on 3. and 6.)
+
+
+### Example 2 of a Deduction in $KPL$
+
+Now, consider the syntactic entailment 
+$A \rightarrow B, B\rightarrow C \vdash A \rightarrow C$
+which is transitivity of conditional statement.
+
+The obvious way to prove this is by means of the modus ponens.
+
+Let's try to do this using axiom schemata only.
+
+1. $A \rightarrow B$ (assmptn.)
+2. $B \rightarrow C$ (assmptn.)
+3. $(A \rightarrow B) \rightarrow ((A \rightarrow (B \rightarrow C)) \rightarrow (A \rightarrow C))$ (instance of ax. sch. (2))
+4. $(A \rightarrow (B \rightarrow C)) \rightarrow (A \rightarrow C)$ (modus ponens on 1. and 3.)
+5. $(B \rightarrow C) \rightarrow (A \rightarrow (B \rightarrow C))$ (instance of ax. sch. (1))
+6. $A \rightarrow (B \rightarrow C)$ (modus ponens on 2. and 5.)
+7. $A \rightarrow C$ (modus ponens on 6. and 3.)
 
 
 ### Axiom Schemata - Intuition
@@ -103,9 +122,13 @@ Axiom schemata (6) - (8) do the same for (inclusive) disjunction and
 
 (10) is the vehicle for removing double negation.
 
-As for (9) - this allows for law of contrapositive - cf. Example above.
+As for (9) - this allows for law of contrapositive - cf. Example 1 above.
 
+Regarding (1): this allows us to show that if we know that formula is true, 
+then this formula is materially implied by any formula (which agrees with  
+*semantic* view of material implication)
 
+Regarding (2): this axiom schemata allows for showing transitivity of material implication - cf. Example 2. 
  
 
 
