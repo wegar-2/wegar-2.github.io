@@ -76,7 +76,7 @@ The set of values of $f$ is finite with $|A| = n + 1 < |B| = n$.
 By the pigeonhole principle we immediately get:
 
 $$
-\exists k, l \in A: f(n_1) = f(n_2) = d
+\exists n_1, n_2 \in A: f(n_1) = f(n_2) = d
 $$
 
 What we can say at this point is that $d$ exists, i.e. we validated that
