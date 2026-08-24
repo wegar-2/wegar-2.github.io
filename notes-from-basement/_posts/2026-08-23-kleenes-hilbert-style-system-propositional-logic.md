@@ -132,6 +132,8 @@ Regarding (2): this axiom schemata allows for showing transitivity of material i
 Also, this one plays vital role in proving the deduction theorem - cf. 
 *Introduction to Metamathematics*. 
 
+Update (2026-08-24): another way to view (2) - modus ponens can be applied (on $B$ and $B \rightarrow C$) under common assumption $A$.
+
 <a id="reference"></a>
 ### References
 1. Stephen C. Kleene, *Introduction to Metamathematics*, Ishi Press International, 2009 printing of 1952 edition

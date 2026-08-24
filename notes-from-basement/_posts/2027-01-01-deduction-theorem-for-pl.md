@@ -36,13 +36,20 @@ Basis $T(1)$: considering the three possible cases.
 
 *Case 1*: 
 If $C$ is one of the $\Gamma, B$. 
-There are two possibilities: wie have to show that $C \vdash C$.
+There are two possibilities: either $C$ is $B$ or $C$ is one of the $\Gamma$.
+
+Let's consider the former possibility first, i.e. $B = C$. We need to show that $\Gamma \vdash C \rightarrow C$:
 
 1. $C \rightarrow (C \rightarrow C)$ (instance of ax. sch. (1))
 2. $(C \rightarrow (C \rightarrow C)) \rightarrow ((C \rightarrow ((C \rightarrow C) \rightarrow C)) \rightarrow (C \rightarrow C))$ (instance of ax. sch. (2))
 3. $(C \rightarrow ((C \rightarrow C) \rightarrow C)) \rightarrow (C \rightarrow C)$ (modus ponens on 1., 2.)
 4. $C \rightarrow ((C\rightarrow C) \rightarrow C)$ (instance of ax. sch. (1))
 5. $C \rightarrow C$ (modus ponens on 4., 3.)
+
+Let's consider the latter case now:
+1. $C$ (assmptn. - in this case $C$ is one of the $\Gamma$s)
+2. $C \rightarrow (B \rightarrow C)$ (ax. sch. (1))
+3. $B \rightarrow C$ (modus ponens on 1., 2.)
 
 *Case 2*: $C$ is an instance of an axiom schemata. 
 The given deduction $\Gamma, B \vdash C$ is just:
@@ -72,7 +79,21 @@ deduction $\Gamma, A \vdash B$ of length $n + 1$.
 The last line of this deduction falls into one of the three cases - analogously
 to the Basis step. Of these, cases 1 and 2 are straightforward.
  
-I am only considering case 3 here: $B$ is obtained via *modus ponens*
+I am only considering case 3 here: $B$ is obtained via *modus ponens* from
+two of previous formulae $P, P \rightarrow B$.
+
+The crucial observation here: since both: $P$ and $P \rightarrow C$
+show up in the proof of the deduction $\Gamma, B \vdash C$ before line $n+1$, 
+the inductive assumption can be applied to them. In other words 
+we can assume that we have the proofs of statements:
+
+1. $B \rightarrow P$ (inductive assumption applied to proof of $\Gamma, B \vdash P$)
+2. $B \rightarrow (P \rightarrow C) $ (inductive assumption applied to proof of $\Gamma, B \vdash P$)
+
+From now on, we use analogous device i.e. axiom schema 2. that allows for chaining
+of arguments under common assumption:
+
+
 
 
 <a id="reference"></a>
