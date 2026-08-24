@@ -132,8 +132,7 @@ Regarding (2): this axiom schemata allows for showing transitivity of material i
 Also, this one plays vital role in proving the deduction theorem - cf. 
 *Introduction to Metamathematics*. 
 
-
 <a id="reference"></a>
 ### References
-1. Stephen C. Kleene, *Introduction to Metamathematics*, Ishi Press International, 1952
-2. Stephen C. Kleene, *Mathematical Logic*, Dover Publications, 1967
+1. Stephen C. Kleene, *Introduction to Metamathematics*, Ishi Press International, 2009 printing of 1952 edition
+2. Stephen C. Kleene, *Mathematical Logic*, Dover Publications, 2002 unabridged republication of 1967 edition 

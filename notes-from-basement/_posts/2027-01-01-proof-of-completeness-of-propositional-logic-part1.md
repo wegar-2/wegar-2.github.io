@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Proof of Completeness of Propositional Logic - Part 1"
-date: 2026-08-26
+date: 2027-01-01
 category: notes-from-basement
 ---
 
