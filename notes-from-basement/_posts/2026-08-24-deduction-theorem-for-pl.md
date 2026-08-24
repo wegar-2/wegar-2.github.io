@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deduction Theorem in KPL"
-date: 2027-01-01
+date: 2026-08-24
 category: notes-from-basement
 ---
 
@@ -90,8 +90,11 @@ we can assume that we have the proofs of statements:
 1. $B \rightarrow P$ (inductive assumption applied to proof of $\Gamma, B \vdash P$)
 2. $B \rightarrow (P \rightarrow C) $ (inductive assumption applied to proof of $\Gamma, B \vdash P$)
 
-From now on, we use analogous device i.e. axiom schema 2. that allows for chaining
-of arguments under common assumption:
+From now on, we use analogous device to the one used in the proof of case 3 in 
+the basis step, i.e. axiom schema (2):
+3. $(B \rightarrow P) \rightarrow ((B \rightarrow (P \rightarrow C)) \rightarrow (B \rightarrow C))$ (instance of ax. sch. (2))
+4. $(B \rightarrow (P \rightarrow C)) \rightarrow (B \rightarrow C)$ (modus ponens on 1., 3.)
+5. $B \rightarrow C$ (modus ponens on 2., 4.)
 
 
 
