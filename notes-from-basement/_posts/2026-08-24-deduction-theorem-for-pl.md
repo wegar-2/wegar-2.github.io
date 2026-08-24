@@ -8,9 +8,10 @@ category: notes-from-basement
 ## Deduction Theorem in $KPL$
 
 This is a proof of the deduction theorem for the $KPL$ system
-(Kleene's Hilbert-style system for propositional logic) that
-I summarize [here](https://wegar-2.github.io/notes-from-basement/2026/08/23/kleenes-hilbert-style-system-propositional-logic.html).
-I am rewriting this proof for my own comprehension and to fill-in the missing 
+(Kleene's Hilbert-style system for propositional logic that
+I summarize [here](https://wegar-2.github.io/notes-from-basement/2026/08/23/kleenes-hilbert-style-system-propositional-logic.html)).
+
+I am rewriting the original proof by Kleene for my own comprehension and to fill in the missing 
 case in the (Basis $T(1)$ step: one line deduction consisting of modus ponens on premises of the given deduction) in the Kleene's proof in *Introduction to Metamathematics* - cf. [references](#references)  
 
 
