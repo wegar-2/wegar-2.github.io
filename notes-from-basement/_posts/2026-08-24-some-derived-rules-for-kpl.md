@@ -7,7 +7,7 @@ category: notes-from-basement
 
 ## Some Derived Rules for $KPL$
 
-Some metalinguistic results for [$KPL$]().
+Some metalinguistic results for [$KPL$](https://wegar-2.github.io/notes-from-basement/2026/08/23/kleenes-hilbert-style-system-propositional-logic.html).
 
 Naming of the dereived rule consistent with Kleene's 
 *Introduction to Metamathematics* - cf. [references](#references).
