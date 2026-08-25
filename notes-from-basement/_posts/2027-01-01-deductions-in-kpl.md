@@ -33,8 +33,18 @@ Deduction:
 ### 2. Chain Inference
 Claim: $A \rightarrow B, B \rightarrow C \vdash A \rightarrow C$
 
-Deduction:
+The claim can be obtained from the deduction:
 
+$A, A \rightarrow B, B \rightarrow C \vdash C $
+
+by application of deduction theorem. 
+
+Proof:
+1. $A$ (given)
+2. $A \rightarrow B$ (given)
+3. $B$ (modus ponens on 1., 2.)
+4. $B \rightarrow C$ (given)
+5. $C$ (modus ponens on 3., 4.)
 
 
 ### 3. Interchange of Premises
