@@ -83,11 +83,51 @@ by single application of the deduction theorem.
 7. $B \rightarrow C$ (modus ponens on 3., 6.)
 8. $C$ (modus ponens on 5., 7.)
 
-Proof 2 (convoluted):
+Proof 2 (no use of shortcut provided by deduction theorem - all steps fully written out):
 
-The idea of the proof is to arrive at the wanted formula $A \wedge B$
-by getting rid of the $A$ and $B$ in the nested conditionals in the given 
-formula $A \rightarrow (B \rightarrow C)$:
+It is instructive to write out a direct proof of the claim without using the 
+deduction theorem directly, but using the techniques that were used in the 
+proof of the deduction theorem to see how they work in practice.
+
+In the deduction that follows, I am mapping the steps of proof 1 to 
+extended proof in which all the steps involved in the proof whose existence 
+is assured by the deduction theorem.
+
+Note that the deduction theorem is a metalinguistic theorem - i.e. a theorem
+in the metalanguage about existence of a certain sequence of formulae in the
+object language.
+
+1.1. $A \wedge B \rightarrow A \wedge B$ (principle of identity)
+
+2.1. $(A \wedge B \rightarrow A) \rightarrow (A \wedge B \rightarrow (A \wedge B \rightarrow A))$ (ax. sch. (1))
+
+2.2. $A \wedge B \rightarrow A$ (ax. sch. (4))
+
+2.3. $A \wedge B \rightarrow (A \wedge B \rightarrow A)$ (modus ponens on 2.1., 2.2.)
+
+3.1. $(A \wedge B \rightarrow A \wedge B) \rightarrow ((A \wedge B \rightarrow (A \wedge B \rightarrow A)) \rightarrow (A \wedge B \rightarrow A))$ (ax. sch. (2))
+
+3.2. $(A \wedge B \rightarrow (A \wedge B \rightarrow A)) \rightarrow (A \wedge B \rightarrow A)$ (modus ponens on 3.1., 1.1.) 
+
+3.3. $A \wedge B \rightarrow A$ (modus ponens on 3.2., 2.3.)
+
+4.1. $(A \wedge B \rightarrow B) \rightarrow (A \wedge B \rightarrow (A \wedge B \rightarrow B))$
+
+4.2. $A \wedge B \rightarrow A$ (ax. sch. (5))
+
+4.3. $A \wedge B \rightarrow (A \wedge B \rightarrow A)$ (modus ponens on 4.1., 4.2.)
+
+5.1. $(A \wedge B \rightarrow A \wedge B) \rightarrow ((A \wedge B \rightarrow (A \wedge B \rightarrow A)) \rightarrow (A \wedge B \rightarrow A))$ (ax. sch. (2))
+
+5.2. $(A \wedge B \rightarrow (A \wedge B \rightarrow A)) \rightarrow (A \wedge B \rightarrow A)$ (modus ponens on 5.1., 1.1.) 
+
+5.3. $A \wedge B \rightarrow A$ (modus ponens on 5.2., 5.3.)
+
+6.1. $$
+
+Proof 3 (simplification of proof 2)
+
+Notice that in proof 2 
 
 1. $((A \wedge B) \rightarrow B) \rightarrow ( (A \wedge B \rightarrow (B \rightarrow C)) \rightarrow (A \wedge B \rightarrow C))$ (ax. sch. (2))
 2. $A \wedge B \rightarrow B$ (ax. sch. (5))
@@ -99,6 +139,11 @@ formula $A \rightarrow (B \rightarrow C)$:
 
 ### 5. Exportation
 Claim: $A \wedge B \rightarrow C \vdash A \rightarrow (B \rightarrow C)$
+
+Proof 1 (using deduction theorem):
+
+
+Proof 2 (convoluted):
 
 ## II. Introductions
 
