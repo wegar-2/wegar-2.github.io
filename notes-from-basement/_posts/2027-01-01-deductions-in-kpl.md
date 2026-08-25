@@ -22,13 +22,19 @@ object language operations for brevity.
 ### 1. Principle of Identity
 Claim: $\vdash A \rightarrow A$
 
-Deduction:
+Deduction: 
 
+1. $A \rightarrow (A \rightarrow A)$ (instance of ax. sch. (1))
+2. $(A \rightarrow (A \rightarrow A)) \rightarrow ((A \rightarrow ((A \rightarrow A) \rightarrow A)) \rightarrow (A \rightarrow A))$ (instance of ax. sch. (2))
+3. $(A \rightarrow ((A \rightarrow A) \rightarrow A)) \rightarrow (A \rightarrow A)$ (modus ponens on 1., 2.)
+4. $A \rightarrow ((A\rightarrow A) \rightarrow A)$ (instance of ax. sch. (1))
+5. $A \rightarrow A$ (modus ponens on 4., 3.)
 
 ### 2. Chain Inference
 Claim: $A \rightarrow B, B \rightarrow C \vdash A \rightarrow C$
 
 Deduction:
+
 
 
 ### 3. Interchange of Premises
