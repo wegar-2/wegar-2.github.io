@@ -1,6 +1,6 @@
-# Notes from Basement
+# (Il)liquid Markets
 
-Order book modelling, 
+Notes concerning order books and market microstructure. 
 
 ## Posts
 {% for post in site.categories.illiquid-markets %}
