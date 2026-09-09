@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Deductions in KPL, Theorem 5, $\S$ 26 of *ItM*"
-date: 2026-08-26
+title: "Deductions in KPL, Theorem 5, $\S$ 26 of *ItM* - part 1"
+date: 2026-09-09
 category: notes-from-basement
 ---
 
-# Deductions in $KPL$: Theorem 5, $\S$ 26 of *ItM*
+# Deductions in $KPL$: Theorem 5, $\S$ 26 of *ItM* - part 1
 
 This is proof of claims given in Theorem 5, $\S$26 of Kleene's 
 *Introduction to Metamathematics* (*ItM*) - cf. [references](#references).
@@ -17,7 +17,7 @@ Let $A$, $B$ and $C$ be formulae of $KPL$.
 As usual, intermixing metalinguistic operations and 
 object language operations for brevity.
 
-## I. Basic Claims
+## Basic Claims
 
 ### 1. Principle of Identity
 Claim: $\vdash A \rightarrow A$
@@ -85,17 +85,17 @@ by single application of the deduction theorem.
 
 Proof 2 (no use of shortcut provided by deduction theorem - all steps fully written out):
 
-It is instructive to write out a direct proof of the claim without using the 
-deduction theorem directly, but using the techniques that were used in the 
-proof of the deduction theorem to see how they work in practice.
+It is instructive to first: write out the full proof of the claim without using the 
+deduction theorem directly, and then observe how it can be simplified using certain
+coincidences.
 
 In the deduction that follows, I am mapping the steps of proof 1 to 
 extended proof in which all the steps involved in the proof whose existence 
 is assured by the deduction theorem.
 
-Note that the deduction theorem is a metalinguistic theorem - i.e. a theorem
-in the metalanguage about existence of a certain sequence of formulae in the
-object language.
+This exposition intends to drive home the point that the deduction theorem is 
+a metalinguistic theorem - i.e. a theorem in the metalanguage about existence 
+of a certain sequence of formulae in the object language.
 
 1.1. $A \wedge B \rightarrow A \wedge B$ (principle of identity)
 
@@ -127,7 +127,7 @@ object language.
 
 Proof 3 (simplification of proof 2)
 
-Notice that in proof 2 
+Notice that in proof 2... 
 
 1. $((A \wedge B) \rightarrow B) \rightarrow ( (A \wedge B \rightarrow (B \rightarrow C)) \rightarrow (A \wedge B \rightarrow C))$ (ax. sch. (2))
 2. $A \wedge B \rightarrow B$ (ax. sch. (5))
@@ -144,18 +144,6 @@ Proof 1 (using deduction theorem):
 
 
 Proof 2 (convoluted):
-
-## II. Introductions
-
-### 6. Introduction of a Conclusion
-
-### 7. Introduction of a Premise
-
-## III. Demonstrations of Implication
-
-## IV. Contraposition
-
-## V. Properties of Equivalence
 
 
 <a id="reference"></a>

@@ -9,12 +9,12 @@ category: notes-from-basement
 
 Some metalinguistic results for [$KPL$](https://wegar-2.github.io/notes-from-basement/2026/08/23/kleenes-hilbert-style-system-propositional-logic.html).
 
-Naming of the dereived rule consistent with Kleene's 
+Naming of the derived rule here is consistent with Kleene's 
 *Introduction to Metamathematics* - cf. [references](#references).
 
-Note that in the deductions below I am deliberately intermixing 
+Note that in the deductions below I am aware of intermixing 
 the metalinguistic operations and object language operations for brevity.
-Lack of precision is the cost of brevity.
+Lack of precision is the price of brevity.
 
 ### 1. Negation Introduction
 Statement of the rule:
