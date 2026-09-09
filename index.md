@@ -24,4 +24,6 @@ I speak Polish (native), English (C1), German (B2) and spoke B2 Spanish many yea
 ## Content
 
 - [Notes from Basement](notes-from-basement/) - notes to self.
+- [(Il)liquid markets](illiquid-markets/) - order books, ML, deep learning, etc.
+
 
